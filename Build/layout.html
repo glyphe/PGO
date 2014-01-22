@@ -1,0 +1,105 @@
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+<html>
+  <head>
+    <title>Galvano One</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <link rel='stylesheet' href='assets/css/bootstrap.css'>
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <script src='assets/js/jquery-1.8.3.min.js'></script>
+<script src='assets/js/jquery.sticky.js'></script>
+    <script>$(window).load(function(){$("#nav-categories").sticky({ topSpacing: 0 });});</script>
+  </head>
+  <body>
+    <header>
+      <div id='nav-main'>
+        <div class='container'>
+          <h1>Galvano One</h1>
+          <nav>
+            <ul>
+              <li>About Galvano One</li>
+              <li>One Business</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id='nav-categories'>
+        <div class='container'>
+          <h2>Berlin</h2>
+          <nav>
+            <ul>
+              <li class='active'>Clubs & Bars</li>
+              <li>Hotels</li>
+              <li>Restaurants</li>
+              <li>Cafés & Lounges</li>
+              <li>Shops</li>
+              <li>Services</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div id='main-content'>
+      <div class='container'>
+        <h3>Berlin today</h3>
+        <div class='row'>
+          <div class='col-sm-6'>
+            <div class='box'></div>
+          </div>
+          <div class='col-sm-6'>
+            <div class='box'></div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-sm-3'>
+            <div class='box'></div>
+          </div>
+          <div class='col-sm-3'>
+            <div class='box'></div>
+          </div>
+          <div class='col-sm-3'>
+            <div class='box'></div>
+          </div>
+          <div class='col-sm-3'>
+            <div class='box'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class='container'>
+        <nav>
+          <ul>
+            <li>About</li>
+            <li>Carrer</li>
+            <li>Labels</li>
+            <li>Imprint</li>
+            <li>Terms & Conditions</li>
+            <li>Contact</li>
+            <li>One Business Login</li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

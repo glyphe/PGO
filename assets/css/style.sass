@@ -1,0 +1,89 @@
+// ##### FARBEN #####
+$gal-rot: rgb(202,42,66)
+$gal-weiss: rgba(255,255,255,.95)
+$mittelgrau: #555
+
+// ##### RESETS #####
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  font-weight: normal
+
+body
+  background-image: url(../img/debut_light.png)
+  font:
+    family: 'Verlag-Book', Arial
+
+#nav-main
+  color: $gal-weiss
+  background-color: $gal-rot
+  box-shadow: 0 0 4px rgba(0,0,0,0.4)
+  position: relative
+  z-index: 3
+  padding: .6em 0 .4em
+
+  h1
+    margin: 0
+    float: left
+    text-transform: uppercase
+    letter-spacing: .1em
+    font:
+      size: 2em
+  nav
+    margin-top: 1em
+
+nav ul
+  float: right
+  padding: 0
+  margin: 0
+
+nav ul li
+  display: inline-block
+  margin-left: .75em
+
+
+nav ul li:first-child
+  margin-left: 0
+
+footer
+
+  nav ul
+    float: none
+
+  nav ul li:last-child
+    float: right
+
+#nav-categories
+  padding-top: .5em
+  width: 100%
+  background-color: rgba(255,255,255,1)
+  box-shadow: 0 0 3px rgba(0,0,0,0.3)
+  position: relative
+  z-index: 2
+  transition: background-color 0.5s ease
+
+  h2
+    float: left
+    color: $gal-rot
+    font-size: 3em
+
+  nav
+    color: $mittelgrau
+    font-size: 1.4em
+    margin-top: 1.1em
+
+  nav ul li
+    padding-bottom: .3em
+
+  .active
+    color: $gal-rot
+    border-bottom: .3em solid $gal-rot
+
+.box
+  height: 550px
+  background-color: #ccc
+  margin: 2em 0
+
+footer
+  color: $gal-weiss
+  background-color: $gal-rot
+  padding: 1em 0 4em

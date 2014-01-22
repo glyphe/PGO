@@ -1,0 +1,73 @@
+<!-- @reload -->
+
+%html
+
+  %head
+    %title Galvano One
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+    <!-- @stylesheet css/bootstrap -->
+    <!-- @stylesheet css/style -->
+    <!-- @javascript jquery-1.8.3.min jquery.sticky  -->
+    <script>$(window).load(function(){$("#nav-categories").sticky({ topSpacing: 0 });});</script>
+
+
+    
+
+  %body
+
+    %header
+      #nav-main
+        .container 
+          %h1 Galvano One
+
+          %nav
+            %ul
+              %li About Galvano One
+              %li One Business
+
+      #nav-categories
+        .container
+          %h2 Berlin
+
+          %nav
+            %ul
+              %li.active Clubs & Bars
+              %li Hotels
+              %li Restaurants
+              %li Cafés & Lounges
+              %li Shops
+              %li Services
+
+    #main-content
+      .container
+        %h3 Berlin today
+
+        .row
+          .col-sm-6
+            .box
+          .col-sm-6
+            .box
+
+        .row
+          .col-sm-3
+            .box
+          .col-sm-3
+            .box
+          .col-sm-3
+            .box
+          .col-sm-3
+            .box
+
+    %footer
+      .container
+        %nav
+          %ul
+            %li About
+            %li Carrer
+            %li Labels
+            %li Imprint
+            %li Terms & Conditions
+            %li Contact
+            %li One Business Login
+
+

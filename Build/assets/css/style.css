@@ -1,0 +1,72 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal; }
+
+body {
+  background-image: url(../img/debut_light.png);
+  font-family: "Verlag-Book", Arial; }
+
+#nav-main {
+  color: rgba(255, 255, 255, 0.95);
+  background-color: #ca2a42;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 3;
+  padding: 0.6em 0 0.4em; }
+  #nav-main h1 {
+    margin: 0;
+    float: left;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 2em; }
+  #nav-main nav {
+    margin-top: 1em; }
+
+nav ul {
+  float: right;
+  padding: 0;
+  margin: 0; }
+
+nav ul li {
+  display: inline-block;
+  margin-left: 0.75em; }
+
+nav ul li:first-child {
+  margin-left: 0; }
+
+footer nav ul {
+  float: none; }
+footer nav ul li:last-child {
+  float: right; }
+
+#nav-categories {
+  padding-top: 0.5em;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+  transition: background-color 0.5s ease; }
+  #nav-categories h2 {
+    float: left;
+    color: #ca2a42;
+    font-size: 3em; }
+  #nav-categories nav {
+    color: #555555;
+    font-size: 1.4em;
+    margin-top: 1.1em; }
+  #nav-categories nav ul li {
+    padding-bottom: 0.3em; }
+  #nav-categories .active {
+    color: #ca2a42;
+    border-bottom: 0.3em solid #ca2a42; }
+
+.box {
+  height: 550px;
+  background-color: #cccccc;
+  margin: 2em 0; }
+
+footer {
+  color: rgba(255, 255, 255, 0.95);
+  background-color: #ca2a42;
+  padding: 1em 0 4em; }
