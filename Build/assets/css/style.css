@@ -6,6 +6,20 @@ body {
   background-image: url(../img/debut_light.png);
   font-family: "Verlag-Book", Arial; }
 
+footer {
+  color: rgba(255, 255, 255, 0.95);
+  background-color: #ca2a42;
+  padding: 1em 0 4em; }
+
+#main-content {
+  padding: 3em 0; }
+
+h3 {
+  margin: 2em 0 1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #555555; }
+
 #nav-main {
   color: rgba(255, 255, 255, 0.95);
   background-color: #ca2a42;
@@ -61,12 +75,45 @@ footer nav ul li:last-child {
     color: #ca2a42;
     border-bottom: 0.3em solid #ca2a42; }
 
-.box {
-  height: 550px;
+.event-box {
+  position: relative;
   background-color: #cccccc;
   margin: 2em 0; }
-
-footer {
-  color: rgba(255, 255, 255, 0.95);
-  background-color: #ca2a42;
-  padding: 1em 0 4em; }
+  .event-box .img-container {
+    position: relative;
+    overflow: hidden;
+    height: 400px; }
+    .event-box .img-container img {
+      position: relative;
+      top: -190px;
+      left: 50%;
+      -webkit-transform: translateX(-50%); }
+  .event-box .event-title {
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    -webkit-transform: translateY(-50%); }
+    .event-box .event-title p {
+      color: rgba(255, 255, 255, 0.95);
+      background-color: rgba(0, 0, 0, 0.9);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 1em;
+      margin: 0; }
+    .event-box .event-title h4 {
+      font-size: 2em;
+      color: #111111;
+      background-color: rgba(255, 255, 255, 0.95);
+      text-align: center;
+      padding: 1em 0.5em;
+      margin: 0; }
+  .event-box .benefit {
+    background-color: #ca2a42;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    padding: 1em 0.5em;
+    margin: 0;
+    border-top: 0.25em solid rgba(255, 255, 255, 0.95); }
