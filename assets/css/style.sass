@@ -6,6 +6,9 @@ $brand-black: #111
 $transp-black: rgba(0,0,0,.9)
 $transp-white: rgba(255,255,255,.95)
 
+$letter-spacing-sml: 0.15em
+$letter-spacing-big: 0.1em
+
 
 // ##### RESETS #####
 
@@ -55,7 +58,7 @@ h3
     margin: 0
     float: left
     text-transform: uppercase
-    letter-spacing: .1em
+    letter-spacing: $letter-spacing-big
     font:
       size: 2em
   nav
@@ -148,7 +151,7 @@ footer
         background-color: $transp-black
         text-align: center
         text-transform: uppercase
-        letter-spacing: 0.15em
+        letter-spacing: $letter-spacing-sml
         padding: 1em
         margin: 0
 
@@ -170,12 +173,45 @@ footer
 
     span
       text-transform: uppercase
-      letter-spacing: .15em
+      letter-spacing: $letter-spacing-sml
       font-size: .8em
 
 .event-box
-  
+  text-align: center
+  padding-bottom: 0.75em
+
   img
     width: 100%
 
+  .event-category
+    text-transform: uppercase
+    letter-spacing: $letter-spacing-sml
+    color: $brand-grey
+    font-size: 0.9em
+    font-weight: 700
+
+  .event-title
+    margin: 1.2em 0 0
+    font-size: 1.5em
+    color: $brand-black
+    line-height: 1.2
+    margin: 1em 0
+    padding: 0 0.25em
+
+  .benefit
+    font-size: 1.3em
+    color: $brand-red
+    
+    span
+      text-transform: uppercase
+      letter-spacing: $letter-spacing-sml
+      font-size: .75em
+      display: block
+
+  hr
+    border: 0
+    width: 5em
+    margin: 0 auto
+    height: 3px
+    background-color: $brand-red
     

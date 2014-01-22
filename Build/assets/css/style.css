@@ -129,5 +129,35 @@ footer nav ul li:last-child {
       letter-spacing: 0.15em;
       font-size: 0.8em; }
 
-.event-box img {
-  width: 100%; }
+.event-box {
+  text-align: center;
+  padding-bottom: 0.75em; }
+  .event-box img {
+    width: 100%; }
+  .event-box .event-category {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #555555;
+    font-size: 0.9em;
+    font-weight: 700; }
+  .event-box .event-title {
+    margin: 1.2em 0 0;
+    font-size: 1.5em;
+    color: #111111;
+    line-height: 1.2;
+    margin: 1em 0;
+    padding: 0 0.25em; }
+  .event-box .benefit {
+    font-size: 1.3em;
+    color: #ca2a42; }
+    .event-box .benefit span {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.75em;
+      display: block; }
+  .event-box hr {
+    border: 0;
+    width: 5em;
+    margin: 0 auto;
+    height: 3px;
+    background-color: #ca2a42; }
