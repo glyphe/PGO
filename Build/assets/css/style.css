@@ -4,10 +4,12 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   background-image: url(../img/debut_light.png);
-  font-family: "Verlag-Book", Arial; }
+  font-family: "Verlag A", "Verlag B";
+  font-font-weight: 400;
+  font-font-style: normal; }
 
 footer {
-  color: rgba(255, 255, 255, 0.95);
+  color: white;
   background-color: #ca2a42;
   padding: 1em 0 4em; }
 
@@ -21,7 +23,7 @@ h3 {
   color: #555555; }
 
 #nav-main {
-  color: rgba(255, 255, 255, 0.95);
+  color: white;
   background-color: #ca2a42;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   position: relative;
@@ -75,45 +77,56 @@ footer nav ul li:last-child {
     color: #ca2a42;
     border-bottom: 0.3em solid #ca2a42; }
 
-.event-box {
+.event-box-feature, .event-box {
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+
+.event-box-feature {
   position: relative;
   background-color: #cccccc;
   margin: 2em 0; }
-  .event-box .img-container {
+  .event-box-feature .img-container {
     position: relative;
     overflow: hidden;
     height: 400px; }
-    .event-box .img-container img {
+    .event-box-feature .img-container img {
       position: relative;
       top: -190px;
       left: 50%;
       -webkit-transform: translateX(-50%); }
-  .event-box .event-title {
+  .event-box-feature .event-box-feature {
     margin: 0 auto;
     width: 50%;
     position: relative;
     z-index: 2;
     top: 50%;
     -webkit-transform: translateY(-50%); }
-    .event-box .event-title p {
-      color: rgba(255, 255, 255, 0.95);
+    .event-box-feature .event-box-feature p {
+      color: white;
       background-color: rgba(0, 0, 0, 0.9);
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       padding: 1em;
       margin: 0; }
-    .event-box .event-title h4 {
+    .event-box-feature .event-box-feature h4 {
       font-size: 2em;
       color: #111111;
       background-color: rgba(255, 255, 255, 0.95);
       text-align: center;
       padding: 1em 0.5em;
       margin: 0; }
-  .event-box .benefit {
+  .event-box-feature .benefit {
     background-color: #ca2a42;
-    color: rgba(255, 255, 255, 0.95);
+    color: white;
     text-align: center;
     padding: 1em 0.5em;
     margin: 0;
-    border-top: 0.25em solid rgba(255, 255, 255, 0.95); }
+    border-top: 0.25em solid white; }
+    .event-box-feature .benefit span {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.8em; }
+
+.event-box img {
+  width: 100%; }
