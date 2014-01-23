@@ -17,10 +17,13 @@ footer {
   padding: 3em 0; }
 
 h3 {
-  margin: 2em 0 1em;
+  margin: 0;
+  font-weight: 300;
+  font-size: 2.8em;
   text-align: center;
   text-transform: uppercase;
-  color: #555555; }
+  color: #555555;
+  letter-spacing: 0.1em; }
 
 #nav-main {
   color: white;
@@ -79,12 +82,12 @@ footer nav ul li:last-child {
 
 .event-box-feature, .event-box {
   background-color: white;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
 
 .event-box-feature {
   position: relative;
   background-color: #cccccc;
-  margin: 2em 0; }
+  margin: 40px 0; }
   .event-box-feature .img-container {
     position: relative;
     overflow: hidden;
@@ -110,14 +113,20 @@ footer nav ul li:last-child {
         letter-spacing: 0.15em;
         padding: 1em;
         margin: 0; }
+      .event-box-feature .img-container .event-title-feature p:before {
+        content: url(../img/icon_restaurant_white.svg);
+        display: block;
+        margin: 0.5em; }
       .event-box-feature .img-container .event-title-feature h4 {
         font-size: 2em;
+        line-height: 1.1;
         color: #111111;
         background-color: rgba(255, 255, 255, 0.95);
         text-align: center;
-        padding: 1em 0.5em;
+        padding: 0.5em;
         margin: 0; }
   .event-box-feature .benefit {
+    font-size: 1.3em;
     background-color: #ca2a42;
     color: white;
     text-align: center;
@@ -125,9 +134,10 @@ footer nav ul li:last-child {
     margin: 0;
     border-top: 0.25em solid white; }
     .event-box-feature .benefit span {
+      display: block;
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      font-size: 0.8em; }
+      font-size: 0.7em; }
 
 .event-box {
   text-align: center;
@@ -140,12 +150,15 @@ footer nav ul li:last-child {
     color: #555555;
     font-size: 0.9em;
     font-weight: 700; }
-  .event-box .event-title {
-    margin: 1.2em 0 0;
+  .event-box .event-category:before {
+    content: url(../img/icon_hotel_sml.svg);
+    display: block;
+    margin: 0.5em; }
+  .event-box h4.event-title {
+    margin: 0 0 0.8em;
     font-size: 1.5em;
     color: #111111;
     line-height: 1.2;
-    margin: 1em 0;
     padding: 0 0.25em; }
   .event-box .benefit {
     font-size: 1.3em;
@@ -153,7 +166,7 @@ footer nav ul li:last-child {
     .event-box .benefit span {
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      font-size: 0.75em;
+      font-size: 0.7em;
       display: block; }
   .event-box hr {
     border: 0;
