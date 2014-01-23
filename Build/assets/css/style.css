@@ -5,8 +5,9 @@ h1, h2, h3, h4, h5, h6 {
 body {
   background-image: url(../img/debut_light.png);
   font-family: "Verlag A", "Verlag B";
-  font-font-weight: 400;
-  font-font-style: normal; }
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px; }
 
 footer {
   color: white;
@@ -16,14 +17,13 @@ footer {
 #main-content {
   padding: 3em 0; }
 
-h3 {
+h4.profile {
   margin: 0;
   font-weight: 300;
-  font-size: 2.8em;
-  text-align: center;
+  font-size: 1.5em;
   text-transform: uppercase;
   color: #555555;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.15em; }
 
 #nav-main {
   color: white;
@@ -37,7 +37,8 @@ h3 {
     float: left;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 2em; }
+    font-size: 2em;
+    font-weight: 300; }
   #nav-main nav {
     margin-top: 1em; }
 
@@ -49,6 +50,9 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-left: 0.75em; }
+  nav ul li img {
+    width: 1.25em;
+    margin: 0 0.1em 0.3em 0; }
 
 nav ul li:first-child {
   margin-left: 0; }
@@ -69,16 +73,39 @@ footer nav ul li:last-child {
   #nav-categories h2 {
     float: left;
     color: #ca2a42;
-    font-size: 3em; }
+    font-size: 3em;
+    font-weight: 300; }
   #nav-categories nav {
     color: #555555;
-    font-size: 1.4em;
+    font-size: 1.2em;
     margin-top: 1.1em; }
-  #nav-categories nav ul li {
-    padding-bottom: 0.3em; }
-  #nav-categories .active {
+  #nav-categories nav ul li a {
+    padding-bottom: 0.4em; }
+  #nav-categories nav a:hover {
+    color: #888888;
+    border-bottom: 0.3em solid #aaaaaa; }
+    #nav-categories nav a:hover img {
+      opacity: 0.8; }
+  #nav-categories .current {
     color: #ca2a42;
     border-bottom: 0.3em solid #ca2a42; }
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit; }
+
+header {
+  text-decoration: none;
+  color: inherit; }
+
+h3.page-title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 2.5em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #888888;
+  letter-spacing: 0.1em; }
 
 .event-box-feature, .event-box {
   background-color: white;
@@ -86,13 +113,13 @@ footer nav ul li:last-child {
 
 .event-box-feature {
   position: relative;
-  background-color: #cccccc;
+  background-color: white;
   margin: 40px 0; }
   .event-box-feature .img-container {
     position: relative;
     overflow: hidden;
     height: 400px; }
-    .event-box-feature .img-container img {
+    .event-box-feature .img-container img.img-feature {
       height: 100%;
       position: relative;
       left: 50%;
@@ -100,73 +127,77 @@ footer nav ul li:last-child {
       z-index: 10; }
     .event-box-feature .img-container .event-title-feature {
       position: absolute;
-      width: 50%;
+      min-width: 50%;
       z-index: 20;
       top: 50%;
       left: 50%;
       -webkit-transform: translateX(-50%) translateY(-50%); }
-      .event-box-feature .img-container .event-title-feature p {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.9);
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        padding: 1em;
-        margin: 0; }
-      .event-box-feature .img-container .event-title-feature p:before {
-        content: url(../img/icon_restaurant_white.svg);
-        display: block;
-        margin: 0.5em; }
       .event-box-feature .img-container .event-title-feature h4 {
-        font-size: 2em;
+        font-size: 1.8em;
         line-height: 1.1;
         color: #111111;
         background-color: rgba(255, 255, 255, 0.95);
         text-align: center;
         padding: 0.5em;
         margin: 0; }
+    .event-box-feature .img-container .event-category-feature {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.9);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 0.9em;
+      margin: 0; }
+      .event-box-feature .img-container .event-category-feature img {
+        display: block;
+        margin: 0 auto; }
   .event-box-feature .benefit {
-    font-size: 1.3em;
+    font-size: 1.2em;
     background-color: #ca2a42;
     color: white;
     text-align: center;
     padding: 1em 0.5em;
     margin: 0;
-    border-top: 0.25em solid white; }
+    border-top: 0.25em solid white;
+    letter-spacing: 0.05em; }
     .event-box-feature .benefit span {
       display: block;
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      font-size: 0.7em; }
+      font-size: 0.7em;
+      font-weight: 700; }
 
 .event-box {
   text-align: center;
   padding-bottom: 0.75em; }
-  .event-box img {
+  .event-box .img-thumb {
     width: 100%; }
   .event-box .event-category {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: #555555;
-    font-size: 0.9em;
-    font-weight: 700; }
-  .event-box .event-category:before {
-    content: url(../img/icon_hotel_sml.svg);
-    display: block;
-    margin: 0.5em; }
+    font-size: 0.8em;
+    font-weight: 700;
+    margin: 0.6em 0; }
+    .event-box .event-category img {
+      display: block;
+      width: 2.6em;
+      opacity: 0.8;
+      margin: 0 auto; }
   .event-box h4.event-title {
     margin: 0 0 0.8em;
     font-size: 1.5em;
     color: #111111;
     line-height: 1.2;
-    padding: 0 0.25em; }
+    padding: 0 0.4em; }
   .event-box .benefit {
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: #ca2a42; }
     .event-box .benefit span {
       text-transform: uppercase;
       letter-spacing: 0.15em;
       font-size: 0.7em;
+      font-weight: 700;
       display: block; }
   .event-box hr {
     border: 0;
@@ -174,3 +205,26 @@ footer nav ul li:last-child {
     margin: 0 auto;
     height: 3px;
     background-color: #ca2a42; }
+
+#profile-title-img {
+  max-width: 1400px;
+  height: 400px;
+  background-image: url(../img/club-title-img.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  margin: -3em auto 2.5em; }
+
+.profile-title-bar {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  .profile-title-bar h3 {
+    color: white;
+    padding: 0.35em 0 0.1em;
+    font-weight: 200;
+    font-size: 3.5em; }
+    .profile-title-bar h3 img {
+      margin: 0 0.2em 0.45em 0; }

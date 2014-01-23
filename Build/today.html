@@ -1,0 +1,198 @@
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+<html>
+  <head>
+    <title>Galvano One</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6035872/766964/css/fonts.css" />
+    <link rel="stylesheet/less" type="text/css" href="assets/css/bootstrap.less" />
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <script src='assets/js/less.js'></script>
+<script src='assets/js/jquery-1.8.3.min.js'></script>
+<script src='assets/js/jquery.sticky.js'></script>
+    <script>$(window).load(function(){$("#nav-categories").sticky({ topSpacing: 0 });});</script>
+  </head>
+  <body>
+    <header>
+      <div id='nav-main'>
+        <div class='container'>
+          <h1>Galvano One</h1>
+          <nav>
+            <ul>
+              <li>About Galvano One</li>
+              <li>One Business</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id='nav-categories'>
+        <div class='container'>
+          <h2><a class='current' href="today.html">Berlin</a></h2>
+          <nav>
+            <ul>
+              <li><a href="#"><img src="assets/icons/icon_club_sml.svg">Clubs & Bars</a></li>
+              <li><a href="#"><img src="assets/icons/icon_hotel_sml.svg">Hotels</a></li>
+              <li><a href="#"><img src="assets/icons/icon_restaurant_sml.svg">Restaurants</a></li>
+              <li><a href="#"><img src="assets/icons/icon_cafe_sml.svg">Cafés & Lounges</a></li>
+              <li><a href="#"><img src="assets/icons/icon_shop_sml.svg">Shops</a></li>
+              <li><a href="#"><img src="assets/icons/icon_services_sml.svg">Services</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
+
+<div id='main-content'>
+  <div class='container'>
+    <h3 class='page-title'>Berlin today</h3>
+    <div class='row'>
+      <div class='col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box-feature'>
+          <div class='img-container'>
+            <img src="assets/img/Foto-Bar.jpg" class="img-feature"/>
+            <div class='event-title-feature'>
+              <div class='event-category-feature'>
+                <img src="assets/icons/icon_club_white.svg">
+                Berghain Berlin
+              </div>
+              <h4>Elektroakustischer Salon: Art’s Birthday 2014</h4>
+            </div>
+          </div>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free Entry until 23:00
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box-feature'>
+          <div class='img-container'>
+            <img src="assets/img/Foto-Restaurant.jpg" class="img-feature"/>
+            <div class='event-title-feature'>
+              <div class='event-category-feature'>
+                <img src="assets/icons/icon_restaurant_white.svg">
+                Brooklyn Beef Club
+              </div>
+              <h4>Business Lunch</h4>
+            </div>
+          </div>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free drink to the menu
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-sm-3'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <img src="assets/img/Foto-Shop.jpg" class="img-thumb"/>
+          <div class='event-category'>
+            <img src="assets/icons/icon_shop_sml.svg">
+            Six Seasons
+          </div>
+          <h4 class='event-title'>Silver jewelry and textiles from Bangladesh</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            20 % Discount
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-sm-3'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <img src="assets/img/Foto-Services.jpg"  class="img-thumb"/>
+          <div class='event-category'>
+            <img src="assets/icons/icon_services_sml.svg">
+            Jet Textilreinigung
+          </div>
+          <h4 class='event-title'>Dry Cleaning</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            The fifth shirt is free
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-sm-3'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <img src="assets/img/Foto-Hotel.png" class="img-thumb"/>
+          <div class='event-category'>
+            <img src="assets/icons/icon_hotel_sml.svg">
+            Hotel Dolder Grand
+          </div>
+          <h4 class='event-title'>5 Stars Hotel with Spa and Wellness Berlin</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free room upgrade
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-sm-3'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <img src="assets/img/Foto-Cafe.jpg" class="img-thumb"/>
+          <div class='event-category'>
+            <img src="assets/icons/icon_cafe_sml.svg">
+            Xara Café Lounge Berlin Mitte
+          </div>
+          <h4 class='event-title'>Best Cocktails in Town</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            First house bill
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class='container'>
+    <nav>
+      <ul>
+        <li>About</li>
+        <li>Carrer</li>
+        <li>Labels</li>
+        <li>Imprint</li>
+        <li>Terms & Conditions</li>
+        <li>Contact</li>
+        <li>One Business Login</li>
+      </ul>
+    </nav>
+  </div>
+</footer>
