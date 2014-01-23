@@ -15,10 +15,13 @@ footer {
   padding: 1em 0 4em; }
 
 #main-content {
-  padding: 3em 0; }
+  margin: 1em 0 3em; }
+
+p {
+  font-size: 1.3em; }
 
 h4.profile {
-  margin: 0;
+  margin: 2.5em 0 1em;
   font-weight: 300;
   font-size: 1.5em;
   text-transform: uppercase;
@@ -86,9 +89,6 @@ footer nav ul li:last-child {
     border-bottom: 0.3em solid #aaaaaa; }
     #nav-categories nav a:hover img {
       opacity: 0.8; }
-  #nav-categories .current {
-    color: #ca2a42;
-    border-bottom: 0.3em solid #ca2a42; }
 
 a:link, a:visited {
   text-decoration: none;
@@ -99,8 +99,8 @@ header {
   color: inherit; }
 
 h3.page-title {
-  margin: 0;
-  font-weight: 300;
+  margin: 0 0 0.75em;
+  font-weight: 200;
   font-size: 2.5em;
   text-align: center;
   text-transform: uppercase;
@@ -109,12 +109,12 @@ h3.page-title {
 
 .event-box-feature, .event-box {
   background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: 20px 0; }
 
 .event-box-feature {
   position: relative;
-  background-color: white;
-  margin: 40px 0; }
+  background-color: white; }
   .event-box-feature .img-container {
     position: relative;
     overflow: hidden;
@@ -214,7 +214,7 @@ h3.page-title {
   background-size: cover;
   background-position: center center;
   position: relative;
-  margin: -3em auto 2.5em; }
+  margin: -3em auto 0; }
 
 .profile-title-bar {
   background-color: rgba(0, 0, 0, 0.85);
@@ -228,3 +228,36 @@ h3.page-title {
     font-size: 3.5em; }
     .profile-title-bar h3 img {
       margin: 0 0.2em 0.45em 0; }
+
+.map {
+  height: 300px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-image: url(../img/profile-map.png);
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+address {
+  font-style: normal; }
+
+.footer-category-links {
+  background-color: white;
+  padding: 4em 0; }
+  .footer-category-links h4 {
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin: 0 0 2em; }
+  .footer-category-links a {
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 0.4em 0.2em; }
+    .footer-category-links a img {
+      display: block;
+      width: 2em;
+      margin: 0 auto; }

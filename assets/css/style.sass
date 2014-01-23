@@ -12,6 +12,7 @@ $transp-white: rgba(255,255,255,.95)
 $letter-spacing-sml: 0.15em
 $letter-spacing-big: 0.1em
 
+$shadow-boxes: 0 0 5px rgba(0,0,0,0.3)
 
 // ##### RESETS #####
 
@@ -19,9 +20,6 @@ $letter-spacing-big: 0.1em
 h1, h2, h3, h4, h5, h6
   margin: 0
   font-weight: normal
-
-p
-  // font-size: 1.5em
 
 
 // ##### GENERAL #####
@@ -40,15 +38,17 @@ footer
   padding: 1em 0 4em
 
 #main-content
-  padding: 3em 0
+  margin: 1em 0 3em
 
+p
+  font-size: 1.3em
 
 
 
 // ##### TYPOGRAPHY #####
 
 h4.profile
-  margin: 0
+  margin: 2.5em 0 1em
   font-weight: 300
   font-size: 1.5em
   text-transform: uppercase
@@ -137,9 +137,9 @@ footer
     img
       opacity: 0.8
 
-  .current
-    color: $brand-red
-    border-bottom: .3em solid $brand-red
+  // .current
+  //   color: $brand-red
+  //   border-bottom: .3em solid $brand-red
 
 
 // ##### LINKS #####
@@ -157,8 +157,8 @@ header
 // ##### OVERVIEW #####
 
 h3.page-title
-  margin: 0
-  font-weight: 300
+  margin: 0 0 0.75em
+  font-weight: 200
   font-size: 2.5em
   text-align: center
   text-transform: uppercase
@@ -168,12 +168,12 @@ h3.page-title
 
 .event-box-feature, .event-box
   background-color: $brand-white
-  box-shadow: 0 0 5px rgba(0,0,0,0.3)
+  box-shadow: $shadow-boxes
+  margin: 20px 0
 
 .event-box-feature
   position: relative
   background-color: $brand-white
-  margin: 40px 0
 
   .img-container
     position: relative
@@ -255,8 +255,6 @@ h3.page-title
       opacity: 0.8
       margin: 0 auto
 
-
-
   h4.event-title
     margin: 0 0 0.8em
     font-size: 1.5em
@@ -294,7 +292,7 @@ h3.page-title
   background-size: cover
   background-position: center center
   position: relative
-  margin: -3em auto 2.5em
+  margin: -3em auto 0
 
 .profile-title-bar
   background-color: $transp-black-lighter
@@ -311,5 +309,48 @@ h3.page-title
 
     img
       margin: 0 0.2em 0.45em 0
+.map
+  height: 300px
+  box-shadow: $shadow-boxes
+  background-image: url(map)
+  background-repeat: no-repeat
+  background-position: center center
+
+address
+  font:
+    style: normal
+
+
+
+// ##### FOOTER CATEGORY LINKS #####
+
+.footer-category-links
+  background-color: $brand-white
+  padding: 4em 0
+
+  h4
+    font-size: 1.2em
+    text-align: center
+    text-transform: uppercase
+    letter-spacing: $letter-spacing-sml
+    margin: 0 0 2em
+
+
+  a
+    display: block
+    text-align: center
+    color: $brand-white
+    background-color: $transp-black
+    text-decoration: none
+    font-size: 1.2em
+    font-weight: 300
+    padding: 0.4em 0.2em
+
+    img
+      display: block
+      width: 2em
+      margin: 0 auto
+
+
 
 
