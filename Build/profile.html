@@ -1,9 +1,75 @@
-<!-- @include _header -->
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+<html>
+  <head>
+    <title>Galvano One</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6035872/766964/css/fonts.css" />
+    <!-- <link rel="stylesheet/less" type="text/css" href="assets/css/bootstrap.less" /> -->
+    <link rel='stylesheet' href='assets/css/bootstrap_css.css'>
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <!-- <script src='assets/js/less.js'></script>
+<script src='assets/js/jquery-1.8.3.min.js'></script>
+<script src='assets/js/jquery.sticky.js'></script> -->
+    <!-- <script>$(window).load(function(){$("#nav-categories").sticky({ topSpacing: 0 });});</script> -->
+  </head>
+  <body>
+    <header>
+      <div id='nav-main'>
+        <div class='container'>
+          <h1>Galvano One</h1>
+          <nav>
+            <ul>
+              <li>About Galvano One</li>
+              <li>One Business</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id='nav-categories'>
+        <div class='container'>
+          <h2><a href="today.html">Berlin</a></h2>
+          <nav>
+            <ul>
+              <li><a href="#"><img src="assets/icons/icon_club_sml.svg">Clubs & Bars</a></li>
+              <li><a href="#"><img src="assets/icons/icon_hotel_sml.svg">Hotels</a></li>
+              <li><a href="#"><img src="assets/icons/icon_restaurant_sml.svg">Restaurants</a></li>
+              <li><a href="#"><img src="assets/icons/icon_cafe_sml.svg">Cafés & Lounges</a></li>
+              <li><a href="#"><img src="assets/icons/icon_shop_sml.svg">Shops</a></li>
+              <li><a href="#"><img src="assets/icons/icon_services_sml.svg">Services</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
+
 <div id='main-content'>
   <div id='profile-title-img'>
     <div class='profile-title-bar'>
       <div class='container'>
-        <h3><img src="<!-- @path icon_club_white.svg -->">Berghain Berlin</h3>
+        <h3><img src="assets/icons/icon_club_white.svg">Berghain Berlin</h3>
       </div>
     </div>
   </div>
@@ -35,5 +101,62 @@
     </div>
   </div>
 </div>
-<!-- @include _footer_categories -->
-<!-- @include _footer -->
+<div class='footer-category-links'>
+  <div class='container'>
+    <h4>More Benefits in Berlin</h4>
+    <div class='row'>
+      <div class='col-sm-2'>
+        <a href='#'>
+          <img src="assets/icons/icon_club_white.svg">
+          Clubs & Bars
+        </a>
+      </div>
+      <div class='col-sm-2'>
+        <a href='#'>
+          <img src="assets/icons/icon_club_white.svg">
+          Hotels
+        </a>
+      </div>
+      <div class='col-sm-2'>
+        <a href='#'>
+          <img src="assets/icons/icon_club_white.svg">
+          Restaurants
+        </a>
+      </div>
+      <div class='col-sm-2'>
+        <a href='#'>
+          <img src="assets/icons/icon_club_white.svg">
+          Cafés & Lounges
+        </a>
+      </div>
+      <div class='col-sm-2'>
+        <a href='#'>
+          <img src="assets/icons/icon_club_white.svg">
+          Shops
+        </a>
+      </div>
+      <div class='col-sm-2'>
+        <a href='#'>
+          <img src="assets/icons/icon_club_white.svg">
+          Services
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class='container'>
+    <nav>
+      <ul>
+        <li>About</li>
+        <li>Carrer</li>
+        <li>Labels</li>
+        <li>Imprint</li>
+        <li>Terms & Conditions</li>
+        <li>Contact</li>
+        <li>One Business Login</li>
+      </ul>
+    </nav>
+  </div>
+</footer>
