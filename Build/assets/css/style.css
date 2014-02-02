@@ -1,6 +1,17 @@
+.bottom-stripe, .profile-page .profile-title-bar, .profile-page .event-box .event-title h4 {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal; }
+
+.font-inital, .profile-page .event-box .benefit span.concierge {
+  text-align: initial;
+  letter-spacing: initial;
+  text-transform: initial; }
 
 body {
   background-image: url(../img/debut_light.png);
@@ -206,7 +217,7 @@ h3.page-title {
     height: 3px;
     background-color: #ca2a42; }
 
-#profile-title-img {
+.profile-page #profile-title-img {
   max-width: 1400px;
   height: 400px;
   background-image: url(../img/club-title-img.jpeg);
@@ -215,29 +226,48 @@ h3.page-title {
   background-position: center center;
   position: relative;
   margin: -3em auto 0; }
-
-.profile-title-bar {
-  background-color: rgba(0, 0, 0, 0.85);
-  position: absolute;
-  bottom: 0;
-  width: 100%; }
-  .profile-title-bar h3 {
-    color: white;
-    padding: 0.35em 0 0.1em;
-    font-weight: 200;
-    font-size: 3.5em; }
-    .profile-title-bar h3 img {
-      margin: 0 0.2em 0.45em 0; }
-
-.map {
+.profile-page .profile-title-bar h3 {
+  color: white;
+  padding: 0.35em 0 0.1em;
+  font-weight: 200;
+  font-size: 3.5em; }
+  .profile-page .profile-title-bar h3 img {
+    margin: 0 0.2em 0.45em 0; }
+.profile-page .map {
   height: 300px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   background-image: url(../img/profile-map.png);
   background-repeat: no-repeat;
   background-position: center center; }
-
-address {
+.profile-page address {
   font-style: normal; }
+.profile-page .event-box {
+  margin-bottom: 4em; }
+  .profile-page .event-box .event-title {
+    position: relative;
+    margin: 0;
+    padding: 0; }
+    .profile-page .event-box .event-title h4 {
+      color: white;
+      font-size: 1.2em;
+      text-align: center;
+      padding: 0.5em; }
+      .profile-page .event-box .event-title h4 span {
+        display: block;
+        font-size: 0.7em; }
+    .profile-page .event-box .event-title h4.no-img {
+      position: static; }
+  .profile-page .event-box p {
+    text-align: left;
+    margin: 1em;
+    font-size: 1.2em; }
+  .profile-page .event-box .benefit {
+    text-align: center; }
+    .profile-page .event-box .benefit span {
+      display: initial; }
+    .profile-page .event-box .benefit span.concierge {
+      text-align: center;
+      display: block; }
 
 .footer-category-links {
   background-color: white;

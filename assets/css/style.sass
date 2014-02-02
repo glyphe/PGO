@@ -14,13 +14,26 @@ $letter-spacing-big: 0.1em
 
 $shadow-boxes: 0 0 5px rgba(0,0,0,0.3)
 
-// ##### RESETS #####
 
+// ##### EXTEND #####
+
+.bottom-stripe
+  background-color: $transp-black-lighter
+  position: absolute
+  bottom: 0
+  width: 100%
+
+
+// ##### RESETS #####
 
 h1, h2, h3, h4, h5, h6
   margin: 0
   font-weight: normal
 
+.font-inital
+  text-align: initial
+  letter-spacing: initial
+  text-transform: initial
 
 // ##### GENERAL #####
 
@@ -284,41 +297,82 @@ h3.page-title
 
 // ##### PROFILE #####
 
-#profile-title-img
-  max-width: 1400px
-  height: 400px
-  background-image: url(club-title-img)
-  background-repeat: no-repeat
-  background-size: cover
-  background-position: center center
-  position: relative
-  margin: -3em auto 0
+.profile-page 
 
-.profile-title-bar
-  background-color: $transp-black-lighter
-  position: absolute
-  bottom: 0
-  width: 100%
+  #profile-title-img
+    max-width: 1400px
+    height: 400px
+    background-image: url(club-title-img)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    position: relative
+    margin: -3em auto 0
 
-  h3
-    color: $brand-white
-    padding: 0.35em 0 0.1em
+  .profile-title-bar
+    @extend .bottom-stripe
+
+    h3
+      color: $brand-white
+      padding: 0.35em 0 0.1em
+      font:
+        weight: 200
+        size: 3.5em
+
+      img
+        margin: 0 0.2em 0.45em 0
+  .map
+    height: 300px
+    box-shadow: $shadow-boxes
+    background-image: url(map)
+    background-repeat: no-repeat
+    background-position: center center
+
+  address
     font:
-      weight: 200
-      size: 3.5em
+      style: normal
 
-    img
-      margin: 0 0.2em 0.45em 0
-.map
-  height: 300px
-  box-shadow: $shadow-boxes
-  background-image: url(map)
-  background-repeat: no-repeat
-  background-position: center center
+  .event-box
+    margin-bottom: 4em
 
-address
-  font:
-    style: normal
+    .event-title
+      position: relative
+      margin: 0
+      padding: 0
+
+      h4 
+        @extend .bottom-stripe
+        color: $brand-white
+        font-size: 1.2em
+        text-align: center
+        padding: 0.5em
+
+        span
+          display: block
+          font-size: .7em
+
+      h4.no-img
+        position: static
+
+    p
+      text-align: left
+      margin: 1em
+      font-size: 1.2em
+
+    .benefit
+      text-align: center
+
+      span
+        display: initial
+
+      span.concierge
+        @extend .font-inital
+        text-align: center
+        display: block
+
+
+
+
 
 
 
@@ -334,7 +388,6 @@ address
     text-transform: uppercase
     letter-spacing: $letter-spacing-sml
     margin: 0 0 2em
-
 
   a
     display: block
