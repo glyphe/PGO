@@ -1720,6 +1720,9 @@ footer nav ul li:last-child {
     border-bottom: 0.3em solid #aaaaaa; }
     #nav-categories nav a:hover img {
       opacity: 0.8; }
+  #nav-categories .current {
+    color: #ca2a42;
+    border-bottom: 0.3em solid #ca2a42; }
 
 a:link, a:visited {
   text-decoration: none;
@@ -1782,6 +1785,11 @@ h3.page-title {
       .event-box-feature .img-container .event-category-feature img {
         display: block;
         margin: 0 auto; }
+      .event-box-feature .img-container .event-category-feature span {
+        display: block;
+        margin-top: -0.25em;
+        font-size: 2.1em;
+        font-weight: 200; }
   .event-box-feature .benefit {
     font-size: 1.2em;
     background-color: #ca2a42;
@@ -1803,18 +1811,23 @@ h3.page-title {
   padding-bottom: 0.75em; }
   .event-box .img-thumb {
     width: 100%; }
+  .event-box .event-date {
+    color: white;
+    background-color: #111111;
+    padding: 0.3em 0;
+    font-size: 1.1em; }
   .event-box .event-category {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: #555555;
     font-size: 0.8em;
     font-weight: 700;
-    margin: 0.6em 0; }
+    margin: 1.2em 0 0.6em; }
     .event-box .event-category img {
       display: block;
       width: 2.6em;
       opacity: 0.8;
-      margin: 0 auto; }
+      margin: -0.6em auto 0; }
   .event-box .event-title {
     margin: 0 0 0.8em;
     font-size: 1.5em;
