@@ -1,0 +1,549 @@
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+<html>
+  <head>
+    <title>Galvano One</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6035872/766964/css/fonts.css" />
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <script src='assets/js/less.js'></script>
+<script src='assets/js/jquery-1.8.3.min.js'></script>
+<script src='assets/js/jquery.sticky.js'></script>
+    <script>$(window).load(function(){$("#nav-categories").sticky({ topSpacing: 0 });});</script>
+  </head>
+  <body>
+    <header>
+      <div id='nav-main'>
+        <div class='container'>
+          <h1>Galvano One</h1>
+          <nav>
+            <ul class='nav-pills'>
+              <li>
+                <a href='#'>About Galvano One</a>
+              </li>
+              <li>
+                <a href='#'>One Business</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id='nav-categories'>
+        <div class='container'>
+          <h2><a href="today.html">Berlin</a></h2>
+          <nav>
+            <ul>
+              <li><a href="category-clubs-bars.html"><img src="assets/icons/icon_club_sml.svg">Clubs & Bars</a></li>
+              <li><a href="today-2.html"><img src="assets/icons/icon_hotel_sml.svg">Hotels</a></li>
+              <li><a href="today-3.html"><img src="assets/icons/icon_restaurant_sml.svg">Restaurants</a></li>
+              <li><a href="#"><img src="assets/icons/icon_cafe_sml.svg">Cafés & Lounges</a></li>
+              <li><a href="#"><img src="assets/icons/icon_shop_sml.svg">Shops</a></li>
+              <li><a href="#"><img src="assets/icons/icon_services_sml.svg">Services</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
+
+<div id='main-content'>
+  <div class='container'>
+    <h3 class='page-title'>Coming up at Clubs & Bars</h3>
+    <div class='row'>
+      <div class='col-md-6 col-sm-12'>
+        <a href="profile.html">
+        <div class='event-box-feature'>
+          <div class='img-container'>
+            <img src="assets/img/Foto-Bar.jpg" class="img-feature"/>
+            <div class='event-title-feature'>
+              <div class='event-category-feature'>
+                Today
+                <span>07.09.2014</span>
+                Berghain Berlin
+              </div>
+              <h4>Elektroakustischer Salon: Art’s Birthday 2014</h4>
+            </div>
+          </div>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free Entry until 23:00
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='clearfix visible-sm'></div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <!-- @todo Style Weekdays -->
+          <div class='event-date'>Tomorrow, 08.09.2014</div>
+          <div class='img-container'>
+            <div class='event-location'>Felix Club Restaurant Berlin</div>
+            <img src="assets/img/club-01.jpg" class="img-thumb"/>
+          </div>
+          <h4 class='event-title'>After Trade Party</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free entrance
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Tu, 09.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-02.jpg"  class="img-thumb"/></div>
+          <div class='event-category'>FritzClub im Postbahnhof</div>
+          <h4 class='event-title'>Concert: Kilians</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Bring a friend
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+    <!-- ///////// 2. Zeile ////////// -->
+    <div class='row'>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Fr, 10.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-04.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Matrix Club Berlin</div>
+          <h4 class='event-title'>United Campus!</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            1 Becks 4 free
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Sa, 11.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-06.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Lido</div>
+          <h4 class='event-title'>Rock AG</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free entrance all night long
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='clearfix visible-sm'></div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Su, 12.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-07.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Gretchen</div>
+          <h4 class='event-title'>Appetite: Kaytranada</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            50 % ticket discount
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Mo, 13.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-05.jpg" class="img-thumb"/></div>
+          <div class='event-category'>L.U.X.</div>
+          <h4 class='event-title'>The Blueblack Hussar Tour</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Get a drink for you and one friend
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+    <!-- ///////// 3. Zeile ////////// -->
+    <div class='row'>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Tu, 14.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-09.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Ma Baker Club Berlin</div>
+          <h4 class='event-title'>Backstreet Boys - Kalkbrenner - Boney M</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free entrance
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Fr, 15.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-10.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Traffic Berlin</div>
+          <h4 class='event-title'>Be Nerd be Cool</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free entrance and a welcome drink
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='clearfix visible-sm'></div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Mo, 18.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-13.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Chalet Berlin</div>
+          <h4 class='event-title'>Limited Monday</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Welcome present
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Tu, 19.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-14.jpg" class="img-thumb"/></div>
+          <div class='event-category'>AVENUE Berlin</div>
+          <h4 class='event-title'>The Rnb Sessions Vol. I</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Come with three friends and get a bottle Champagne
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+    <!-- ///////// 4. Zeile ////////// -->
+    <div class='row'>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>We, 20.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-15.jpg"  class="img-thumb"/></div>
+          <div class='event-category'>Freischwimmer</div>
+          <h4 class='event-title'>RECYCLE - Berlin's finest Drum'n'Bass: Camo & Krooked</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free Vodka Bull
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Th, 21.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-21.jpg"  class="img-thumb"/></div>
+          <div class='event-category'>FritzClub im Postbahnhof</div>
+          <h4 class='event-title'>It’s Belvedere Night</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            One Shot Belvedere Vodka
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='clearfix visible-sm'></div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Sa, 22.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-17.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Lido</div>
+          <h4 class='event-title'>Rock AG</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free entrance all night long
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Su, 23.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-18.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Ma Baker Club Berlin</div>
+          <h4 class='event-title'>Backstreet Boys - Kalkbrenner - Boney M</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free entrance
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+    <!-- ///////// 5. Zeile ////////// -->
+    <div class='row'>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Sa, 17.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-11.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Adagio Berlin</div>
+          <h4 class='event-title'>Ladies Night</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Men Strip & Free Prosecco for ladies only
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Su, 17.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-12.jpg"  class="img-thumb"/></div>
+          <div class='event-category'>40 Seconds Club</div>
+          <h4 class='event-title'>The Penthouse Hype</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free entry until 24:00
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='clearfix visible-sm'></div>
+      <div class='col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box-feature'>
+          <div class='img-container'>
+            <img src="assets/img/club-05.jpg" class="img-feature"/>
+            <div class='event-title-feature'>
+              <div class='event-category-feature'>
+                Thirsday
+                <span>13.09.2014</span>
+                L.U.X.
+              </div>
+              <h4>The Blueblack Hussar Tour</h4>
+            </div>
+          </div>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Get a drink for you and one friend
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+    <!-- ///////// 6. Zeile ////////// -->
+    <div class='row'>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Mo, 24.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-19.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Puro Sky Lounge Berlin</div>
+          <h4 class='event-title'>I love you but I’ve chosen disco</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free entrance
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Tu, 25.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-20.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Traffic Berlin</div>
+          <h4 class='event-title'>Be Nerd be Cool</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free entrance and a welcome drink
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='clearfix visible-sm'></div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>We, 26.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-11.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Adagio Berlin</div>
+          <h4 class='event-title'>Ladies Night</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Men Strip & Free Prosecco for ladies only
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Th, 27.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-12.jpg"  class="img-thumb"/></div>
+          <div class='event-category'>40 Seconds Club</div>
+          <h4 class='event-title'>The Penthouse Hype</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free entry until 24:00
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+    <!-- ///////// 7. Zeile ////////// -->
+    <div class='row'>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Sa, 28.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-07.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Gretchen</div>
+          <h4 class='event-title'>Appetite: Kaytranada</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            50 % ticket discount
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Su, 29.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-16.jpg" class="img-thumb"/></div>
+          <div class='event-category'>Matrix Club Berlin</div>
+          <h4 class='event-title'>United Campus!</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            1 Becks 4 free
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='clearfix visible-sm'></div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Mo, 30.09.2014</div>
+          <div class='img-container'><img src="assets/img/club-14.jpg" class="img-thumb"/></div>
+          <div class='event-category'>AVENUE Berlin</div>
+          <h4 class='event-title'>The Rnb Sessions Vol. I</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Come with three friends and get a bottle Champagne
+          </p>
+        </div>
+        </a>
+      </div>
+      <div class='col-md-3 col-sm-6'>
+        <a href="profile.html">
+        <div class='event-box'>
+          <div class='event-date'>Tu, 01.10.2014</div>
+          <div class='img-container'><img src="assets/img/club-08.jpg"  class="img-thumb"/></div>
+          <div class='event-category'>Freischwimmer</div>
+          <h4 class='event-title'>Drum'n'Bass: Camo & Krooked</h4>
+          <hr>
+          <p class='benefit'>
+            <span>Member Benefit</span>
+            Free Vodka Bull
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='footer-category-links'>
+  <div class='container'>
+    <h4>More Benefits in Berlin</h4>
+    <nav>
+      <ul>
+        <li>
+          <a href='category-clubs-bars.html'><img src="assets/icons/icon_club_white.svg"> Clubs & Bars</a>
+        </li>
+        <li>
+          <a href='#'><img src="assets/icons/icon_club_white.svg"> Hotels</a>
+        </li>
+        <li>
+          <a href='#'><img src="assets/icons/icon_club_white.svg"> Restaurants</a>
+        </li>
+        <li>
+          <a href='#'><img src="assets/icons/icon_club_white.svg"> Cafés & Lounges</a>
+        </li>
+        <li>
+          <a href='#'><img src="assets/icons/icon_club_white.svg"> Shops</a>
+        </li>
+        <li>
+          <a href='#'><img src="assets/icons/icon_club_white.svg"> Services</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<footer>
+  <div class='container'>
+    <nav>
+      <ul>
+        <li>About</li>
+        <li>Carrer</li>
+        <li>Labels</li>
+        <li>Imprint</li>
+        <li>Terms & Conditions</li>
+        <li>Contact</li>
+        <li>One Business Login</li>
+      </ul>
+    </nav>
+  </div>
+</footer>

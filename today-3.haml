@@ -5,37 +5,40 @@
     %h3.page-title Berlin today
 
     .row
-      .col-sm-6
+      .col-md-3.col-sm-6
         <a href="<!-- @path profile -->">
-        .event-box-feature
-          .img-container
-            <img src="<!-- @path Foto-Bar.jpg -->" class="img-feature"/>
-            .event-title-feature
-              .event-category-feature 
-                <img src="<!-- @path icon_club_white.svg -->">
+        .event-box
+          .img-container <img src="<!-- @path Foto-Bar -->"/>
+          .flex-container
+            .info-containter
+              .event-category
+                <img src="<!-- @path icon_club_sml -->">
                 Berghain Berlin
-              %h4 Elektroakustischer Salon: Art’s Birthday 2014 
-          %p.benefit
-            %span Member Benefit
-            Free Entry until 23:00
+              %h4.event-title Elektroakustischer Salon: Art’s Birthday 2014
+              <hr>
+              %p.benefit
+                %span Member Benefit
+                Free Entry until 23:00
         </a>
 
-      .col-sm-6
+      .col-md-3.col-sm-6
         <a href="<!-- @path profile -->">
-        .event-box-feature
-          .img-container
-            <img src="<!-- @path Foto-Restaurant.jpg -->" class="img-feature"/>
-            .event-title-feature
-              .event-category-feature 
-                <img src="<!-- @path icon_restaurant_white.svg -->">
+        .event-box
+          .img-container <img src="<!-- @path Foto-Restaurant -->"/>
+          .flex-container
+            .info-containter
+              .event-category
+                <img src="<!-- @path icon_restaurant_sml -->">
                 Brooklyn Beef Club
-              %h4 Business Lunch
-          %p.benefit 
-            %span Member Benefit
-            Free drink to the menu
+              %h4.event-title Business Lunch
+              <hr>
+              %p.benefit
+                %span Member Benefit
+                Free drink to the menu
         </a>
 
-    .row
+      .clearfix.visible-sm
+
       .col-md-3.col-sm-6
         <a href="<!-- @path profile -->">
         .event-box
@@ -68,9 +71,8 @@
                 The fifth shirt is free
         </a>
 
-      .clearfix.visible-sm
-
-      .col-md-3.col-sm-6
+    .row
+      .col-md-offset-3.col-md-3.col-sm-6
         <a href="<!-- @path profile -->">
         .event-box
           .img-container <img src="<!-- @path Foto-Hotel.png -->"/>
