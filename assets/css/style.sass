@@ -184,7 +184,7 @@ h3.page-title
 .event-box-feature, .event-box
   background-color: $brand-white
   box-shadow: $shadow-boxes
-  margin: 20px 0
+  margin: 20px 0 30px
 
 .event-box-feature
   position: relative
@@ -193,7 +193,7 @@ h3.page-title
   .img-container
     position: relative
     overflow: hidden
-    height: 400px
+    height: 350px
 
     img.img-feature
       height: 100%
@@ -257,16 +257,25 @@ h3.page-title
 
 .event-box
   text-align: center
-  padding-bottom: 0.75em
+  min-height: 440px
 
-  .img-thumb
-    width: 100%
+  .img-container
+    position: relative
+    overflow: hidden
 
-  .event-date
+    .event-location
+      @extend .bottom-stripe
+
+    img
+      height: 200px
+
+  .event-date, .event-location
     color: $brand-white
     background-color: $brand-black
-    padding: 0.3em 0
-    font-size: 1.1em
+    padding: 0.3em 0.1em
+    font-size: 0.9em
+    text-transform: uppercase
+    letter-spacing: $letter-spacing-sml
 
   .event-category
     text-transform: uppercase
@@ -292,6 +301,7 @@ h3.page-title
   .benefit
     font-size: 1.2em
     color: $brand-red
+    padding: 0 0.2em
     
     span
       text-transform: uppercase

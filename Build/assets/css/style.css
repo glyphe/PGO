@@ -1618,7 +1618,7 @@ input[type="button"].btn-block {
 @media print {
   .hidden-print {
     display: none !important; } }
-.bottom-stripe, .profile-page .profile-title-bar, .profile-page .event-box .event-title h4 {
+.bottom-stripe, .event-box .img-container .event-location, .profile-page .profile-title-bar, .profile-page .event-box .event-title h4 {
   background-color: rgba(0, 0, 0, 0.85);
   position: absolute;
   bottom: 0;
@@ -1744,7 +1744,7 @@ h3.page-title {
 .event-box-feature, .event-box {
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  margin: 20px 0; }
+  margin: 20px 0 30px; }
 
 .event-box-feature {
   position: relative;
@@ -1752,7 +1752,7 @@ h3.page-title {
   .event-box-feature .img-container {
     position: relative;
     overflow: hidden;
-    height: 400px; }
+    height: 350px; }
     .event-box-feature .img-container img.img-feature {
       height: 100%;
       position: relative;
@@ -1808,14 +1808,19 @@ h3.page-title {
 
 .event-box {
   text-align: center;
-  padding-bottom: 0.75em; }
-  .event-box .img-thumb {
-    width: 100%; }
-  .event-box .event-date {
+  min-height: 440px; }
+  .event-box .img-container {
+    position: relative;
+    overflow: hidden; }
+    .event-box .img-container img {
+      height: 200px; }
+  .event-box .event-date, .event-box .event-location {
     color: white;
     background-color: #111111;
-    padding: 0.3em 0;
-    font-size: 1.1em; }
+    padding: 0.3em 0.1em;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em; }
   .event-box .event-category {
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -1836,7 +1841,8 @@ h3.page-title {
     padding: 0 0.4em; }
   .event-box .benefit {
     font-size: 1.2em;
-    color: #ca2a42; }
+    color: #ca2a42;
+    padding: 0 0.2em; }
     .event-box .benefit span {
       text-transform: uppercase;
       letter-spacing: 0.15em;
