@@ -1,4 +1,5 @@
 @import "bootstrap.scss"
+@import "font-awesome/font-awesome.scss"
 
 // ##### FARBEN #####
 $brand-red: rgb(202,42,66)
@@ -132,7 +133,7 @@ footer
     float: right
 
 
-#nav-categories
+#nav-categories, #nav-one-business
   padding-top: .5em
   width: 100%
   background-color: rgba(255,255,255,1)
@@ -140,6 +141,9 @@ footer
   position: relative
   z-index: 200
   transition: background-color 0.5s ease
+
+  .container
+    position: relative
 
   h2
     float: left
@@ -155,11 +159,15 @@ footer
     color: $brand-grey
     font-size: 1.2em
     margin-top: 1.1em
+    position: absolute
+    bottom: 0
+    right: 20px
 
-    ul li
+    li
       a
         display: inline-block
         padding-bottom: 0.6em
+        border-bottom: .3em solid rgba(255,255,255,0)
 
       a:hover
         color: $brand-mid-grey
