@@ -1,12 +1,30 @@
 #nav-categories
   .container
-    %h2 <a href="<!-- @path today -->">Berlin</a>
+    %h2 <a href="<!-- @path today -->">Berlin <i class="fa fa-sort"></i></a>
 
     %nav
       %ul
-        %li <a href="<!-- @path category-clubs-bars -->"><img src="<!-- @path icon_club_sml.svg -->">Clubs & Bars</a>
-        %li <a href="<!-- @path today-2 -->"><img src="<!-- @path icon_hotel_sml.svg -->">Hotels</a>
-        %li <a href="<!-- @path today-3 -->"><img src="<!-- @path icon_restaurant_sml.svg -->">Restaurants</a>
-        %li <a href="#"><img src="<!-- @path icon_cafe_sml.svg -->">Cafés & Lounges</a>
-        %li <a href="#"><img src="<!-- @path icon_shop_sml.svg -->">Shops</a>
-        %li <a href="#"><img src="<!-- @path icon_services_sml.svg -->">Services</a>
+        %li
+          %a(a href="<!-- @path category-clubs-bars -->")
+            %i.fa.fa-glass
+            Clubs & Bars
+        %li
+          %a(a href="<!-- @path today-2 -->")
+            %i.fa.fa-home
+            Hotels
+        %li
+          %a(a href="<!-- @path today-3 -->")
+            %i.fa.fa-cutlery
+            Restaurants
+        %li
+          %a(a href="#")
+            %i.fa.fa-coffee
+            Coffee & Lounges
+        %li
+          %a(a href="#")
+            %i.fa.fa-shopping-cart
+            Shops
+        %li
+          %a(a href="#")
+            <img src="<!-- @path icon_services_sml.svg -->">
+            Services

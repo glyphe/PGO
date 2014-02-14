@@ -2954,11 +2954,16 @@ input[type="button"].btn-block {
   width: 100%;
   z-index: 100; }
 
+.one-business .event-booked a.view, .one-business .event-booked a.edit, .event-disabled {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700; }
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal; }
 
-.font-inital, .profile-page .event-box .benefit span.concierge {
+.font-inital, .profile-page .event-box .benefit span.concierge, .profile-page .event-box .one-business .featured span.concierge, .one-business .profile-page .event-box .featured span.concierge {
   text-align: initial;
   letter-spacing: initial;
   text-transform: initial; }
@@ -3020,10 +3025,11 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  margin-left: 0.75em; }
+  margin-left: 1em; }
   nav ul li img {
     width: 1.25em;
-    margin: 0 0.1em 0.3em 0; }
+    position: relative;
+    bottom: 4px; }
 
 nav ul li:first-child {
   margin-left: 0; }
@@ -3048,6 +3054,11 @@ footer nav ul li:last-child {
     color: #ca2a42;
     font-size: 3em;
     font-weight: 300; }
+    #nav-categories h2 i, #nav-one-business h2 i {
+      color: #aaaaaa;
+      font-size: 0.35em;
+      position: relative;
+      bottom: 8px; }
     #nav-categories h2 a:hover, #nav-one-business h2 a:hover {
       color: #888888; }
   #nav-categories nav, #nav-one-business nav {
@@ -3057,6 +3068,9 @@ footer nav ul li:last-child {
     position: absolute;
     bottom: 0;
     right: 20px; }
+    #nav-categories nav li i, #nav-one-business nav li i {
+      font-size: 0.9em;
+      margin-right: 2px; }
     #nav-categories nav li a, #nav-one-business nav li a {
       display: inline-block;
       padding-bottom: 0.6em;
@@ -3070,6 +3084,11 @@ footer nav ul li:last-child {
       color: #ca2a42;
       border-bottom: 0.3em solid #ca2a42; }
 
+#nav-one-business h2 {
+  color: #888888;
+  font-size: 2.5em;
+  margin-bottom: 0.1em; }
+
 a:link, a:visited {
   text-decoration: none;
   color: inherit; }
@@ -3078,7 +3097,7 @@ header {
   text-decoration: none;
   color: inherit; }
 
-h3.page-title {
+h3.page-title, .membership h3 {
   margin: 0 0 0.75em;
   font-weight: 200;
   font-size: 2.5em;
@@ -3142,13 +3161,13 @@ h3.page-title {
     color: #111111;
     line-height: 1.2;
     padding: 0 0.4em; }
-  .event-box .benefit {
+  .event-box .benefit, .event-box .one-business .featured, .one-business .event-box .featured {
     font-size: 1.2em;
     color: #ca2a42;
     padding: 0 0.2em;
     line-height: 1.2;
     margin: 0; }
-    .event-box .benefit span {
+    .event-box .benefit span, .event-box .one-business .featured span, .one-business .event-box .featured span {
       text-transform: uppercase;
       letter-spacing: 0.15em;
       font-size: 0.7em;
@@ -3206,7 +3225,7 @@ h3.page-title {
         margin-top: -0.25em;
         font-size: 2.1em;
         font-weight: 200; }
-  .event-box-feature .benefit {
+  .event-box-feature .benefit, .event-box-feature .one-business .featured, .one-business .event-box-feature .featured {
     font-size: 1.2em;
     background-color: #ca2a42;
     color: white;
@@ -3215,7 +3234,7 @@ h3.page-title {
     margin: 0;
     border-top: 0.25em solid white;
     letter-spacing: 0.05em; }
-    .event-box-feature .benefit span {
+    .event-box-feature .benefit span, .event-box-feature .one-business .featured span, .one-business .event-box-feature .featured span {
       display: block;
       text-transform: uppercase;
       letter-spacing: 0.15em;
@@ -3276,11 +3295,11 @@ h3.page-title {
     text-align: left;
     margin: 1em;
     font-size: 1.2em; }
-  .profile-page .event-box .benefit {
+  .profile-page .event-box .benefit, .profile-page .event-box .one-business .featured, .one-business .profile-page .event-box .featured {
     text-align: center; }
-    .profile-page .event-box .benefit span {
+    .profile-page .event-box .benefit span, .profile-page .event-box .one-business .featured span, .one-business .profile-page .event-box .featured span {
       display: initial; }
-    .profile-page .event-box .benefit span.concierge {
+    .profile-page .event-box .benefit span.concierge, .profile-page .event-box .one-business .featured span.concierge, .one-business .profile-page .event-box .featured span.concierge {
       color: #888888;
       font-style: italic;
       font-size: 0.85em;
@@ -3288,10 +3307,33 @@ h3.page-title {
       display: block;
       margin-top: 0.3em; }
 
-.membership h3 {
-  font-size: 3em;
-  font-weight: 200;
-  color: #ca2a42; }
+img.screen {
+  margin-bottom: 8em; }
+
+.one-business .login-form {
+  display: block;
+  margin: 5em auto 8em; }
+.one-business h3.page-title, .one-business .membership h3, .membership .one-business h3 {
+  text-transform: initial;
+  letter-spacing: initial;
+  text-align: left;
+  font-size: 3.2em;
+  color: #555555; }
+.one-business .event-booked a.view, .one-business .event-booked a.edit {
+  background-color: #ca2a42;
+  color: white;
+  margin: 0.5em;
+  font-size: 0.9em;
+  padding: 0.25em 0.1em 0.2em 0.6em; }
+.one-business .event-booked a.edit {
+  background-color: #888888; }
+
+.event-disabled {
+  min-height: 200px;
+  color: #888888;
+  background-color: #eeeeee;
+  font-size: 1em;
+  margin-bottom: -0.5em; }
 
 .footer-category-links {
   background-color: white;
