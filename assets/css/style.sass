@@ -405,7 +405,28 @@ h3.page-title
 
 // ##### PROFILE #####
 
-.profile-page 
+.profile-page
+
+  a
+    color: $brand-red
+
+  a:hover
+    color: $brand-mid-grey
+
+  ul.social
+    padding: 0
+    font-size: 1.3em
+    list-style: none
+
+    li
+      display: inline-block
+      margin-right: 1em
+
+    a
+      color: $brand-mid-grey
+
+    a:hover
+      color: $brand-red
 
   #profile-title-img
     max-width: 1400px
@@ -468,6 +489,7 @@ h3.page-title
         span
           display: block
           font-size: .7em
+          background-color: initial
 
       h4.no-img
         position: static
@@ -507,11 +529,18 @@ h3.page-title
 img.screen
   margin-bottom: 8em
 
+img.detail-side
+  margin: 2.4em 0 0
+
 
 // ##### ONE BUSINESS  #####
 
 
 .one-business
+
+  .content-overview
+    display: block
+    margin: 1em auto 8em
 
   .login-form
     display: block

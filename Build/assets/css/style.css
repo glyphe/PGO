@@ -3244,6 +3244,21 @@ h3.page-title, .membership h3 {
 .today .flex-container {
   min-height: 210px; }
 
+.profile-page a {
+  color: #ca2a42; }
+.profile-page a:hover {
+  color: #888888; }
+.profile-page ul.social {
+  padding: 0;
+  font-size: 1.3em;
+  list-style: none; }
+  .profile-page ul.social li {
+    display: inline-block;
+    margin-right: 1em; }
+  .profile-page ul.social a {
+    color: #888888; }
+  .profile-page ul.social a:hover {
+    color: #ca2a42; }
 .profile-page #profile-title-img {
   max-width: 1400px;
   height: 400px;
@@ -3288,7 +3303,8 @@ h3.page-title, .membership h3 {
       padding: 0.5em; }
       .profile-page .event-box .event-title h4 span {
         display: block;
-        font-size: 0.7em; }
+        font-size: 0.7em;
+        background-color: initial; }
     .profile-page .event-box .event-title h4.no-img {
       position: static; }
   .profile-page .event-box p {
@@ -3310,6 +3326,12 @@ h3.page-title, .membership h3 {
 img.screen {
   margin-bottom: 8em; }
 
+img.detail-side {
+  margin: 2.4em 0 0; }
+
+.one-business .content-overview {
+  display: block;
+  margin: 1em auto 8em; }
 .one-business .login-form {
   display: block;
   margin: 5em auto 8em; }
