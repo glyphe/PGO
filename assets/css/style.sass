@@ -8,6 +8,7 @@ $brand-white: #fff
 $brand-grey: #555
 $brand-mid-grey: #888
 $brand-light-grey: #AAA
+$brand-lighter-grey: #EEE
 $brand-black: #111
 $transp-black: rgba(0,0,0,.9)
 $transp-black-lighter: rgba(0,0,0,.85)
@@ -28,6 +29,12 @@ $shadow-boxes-darker: 0 2px 7px rgba(0,0,0,0.5)
   bottom: 0
   width: 100%
   z-index: 100
+
+
+%capitals
+  text-transform: uppercase
+  letter-spacing: $letter-spacing-sml
+  font-weight: 700 
 
 
 // ##### RESETS #####
@@ -114,11 +121,13 @@ nav ul
 
 nav ul li
   display: inline-block
-  margin-left: .75em
+  margin-left: 1em
 
   img
     width: 1.25em
-    margin: 0 .1em .3em 0
+    position: relative
+    bottom: 4px
+
 
 
 nav ul li:first-child
@@ -152,6 +161,12 @@ footer
       size: 3em
       weight: 300
 
+    i
+      color: $brand-light-grey
+      font-size: 0.35em
+      position: relative
+      bottom: 8px
+
     a:hover
       color: $brand-mid-grey
 
@@ -164,6 +179,11 @@ footer
     right: 20px
 
     li
+
+      i
+        font-size: 0.9em
+        margin-right: 2px
+
       a
         display: inline-block
         padding-bottom: 0.6em
@@ -180,6 +200,12 @@ footer
         color: $brand-red
         border-bottom: .3em solid $brand-red
 
+
+#nav-one-business
+  h2
+    color: $brand-mid-grey
+    font-size: 2.5em
+    margin-bottom: 0.1em
 
 
 // ##### LINKS #####
@@ -379,7 +405,28 @@ h3.page-title
 
 // ##### PROFILE #####
 
-.profile-page 
+.profile-page
+
+  a
+    color: $brand-red
+
+  a:hover
+    color: $brand-mid-grey
+
+  ul.social
+    padding: 0
+    font-size: 1.3em
+    list-style: none
+
+    li
+      display: inline-block
+      margin-right: 1em
+
+    a
+      color: $brand-mid-grey
+
+    a:hover
+      color: $brand-red
 
   #profile-title-img
     max-width: 1400px
@@ -442,6 +489,7 @@ h3.page-title
         span
           display: block
           font-size: .7em
+          background-color: initial
 
       h4.no-img
         position: static
@@ -473,11 +521,63 @@ h3.page-title
 .membership
 
   h3
-    font-size: 3em
-    font-weight: 200
-    color: $brand-red
+    @extend h3.page-title
 
 
+// ##### SCREENSHOTS  #####
+
+img.screen
+  margin-bottom: 8em
+
+img.detail-side
+  margin: 2.4em 0 0
+
+
+// ##### ONE BUSINESS  #####
+
+
+.one-business
+
+  .content-overview
+    display: block
+    margin: 1em auto 8em
+
+  .login-form
+    display: block
+    margin: 5em auto 8em
+
+  h3.page-title
+    text-transform: initial
+    letter-spacing: initial
+    text-align: left
+    font-size: 3.2em
+    color: $brand-grey
+
+  .event-booked
+
+    a.view
+      @extend %capitals
+      background-color: $brand-red
+      color: $brand-white
+      margin: 0.5em
+      font-size: 0.9em
+      padding: 0.25em 0.1em 0.2em 0.6em
+
+    a.edit
+      @extend a.view
+      background-color: $brand-mid-grey
+
+  .featured
+    @extend .benefit
+
+
+.event-disabled
+  min-height: 200px
+  color: $brand-mid-grey
+  background-color: $brand-lighter-grey
+  @extend %capitals
+  font-size: 1em
+  margin-bottom: -0.5em
 
 // ##### FOOTER CATEGORY LINKS #####
 
